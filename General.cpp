@@ -40,5 +40,9 @@ int main(){
     cout<<"\n";
     class8.sum();
 
+    int overall;
+    overall = class6.total + class7.total + class8.total;
+    cout<<"\n\nOverall students from class 6 to 8 is: "<<overall;
+    
     return 0;
 }
