@@ -1,17 +1,24 @@
 #include <iostream>
 using namespace std;
+//Class declaration
 class Pupils{
     public:
     int boys;
     int girls;
     int total;
-
+    //a function to calculate total students in a class
     int sum(){
         total = boys + girls;
         cout<<"The total number of pupils in the class is: "<<total;
         return 0;
     }
 };
+//a function for total number of pupils
+int num_of_pupils(Pupils class6, Pupils class7, Pupils class8){
+    int overall;
+    overall = class6.total + class7.total + class8.total;
+    cout<<"\n\nOverall students from class 6 to 8 is: "<<overall;
+}
 int main(){
     cout<<"Mwembeni Primary Mixed Class 6\n";
     Pupils class6;
@@ -39,10 +46,9 @@ int main(){
     cout<<"\nThe girls in class 8 are: "<<class8.girls;
     cout<<"\n";
     class8.sum();
-
-    int overall;
-    overall = class6.total + class7.total + class8.total;
-    cout<<"\n\nOverall students from class 6 to 8 is: "<<overall;
     
+    //function call to calculate overall number
+    num_of_pupils(class6, class7, class8);
+
     return 0;
 }
